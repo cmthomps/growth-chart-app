@@ -18,8 +18,8 @@
     <script src="fhir-client.js"></script>
     <script>
         function launch() {
-            //let clientID = localStorage.getItem('publicAppClientID');
-            let clientID = "5O_0ExGLbACFmMUipXV3FKxhB7DgJwA5YArlsai8mjw";
+            let clientID = localStorage.getItem('publicAppClientID');
+            //let clientID = "5O_0ExGLbACFmMUipXV3FKxhB7DgJwA5YArlsai8mjw";
 
             FHIR.oauth2.authorize({
                 // "client_id": "growth_chart",
@@ -35,8 +35,8 @@
             localStorage.setItem('publicAppClientID', clientID);
             launch();
         }
-        //let clientID = localStorage.getItem('publicAppClientID');
-        let clientID = "5O_0ExGLbACFmMUipXV3FKxhB7DgJwA5YArlsai8mjw";
+        let clientID = localStorage.getItem('publicAppClientID');
+        //let clientID = "5O_0ExGLbACFmMUipXV3FKxhB7DgJwA5YArlsai8mjw";
         if (!clientID) {
             window.addEventListener('load', function() {
                 document.body.classList.add("requireRegistration");
